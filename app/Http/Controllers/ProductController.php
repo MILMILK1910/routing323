@@ -116,7 +116,7 @@ class ProductController extends Controller
 
     /**
      * Display a listing of the resource.
-     * การดึงข้อมูลจากฐานข้อมูลไปยังหน้าเว็บผ่าน inertia โดยการน render
+     * การดึงข้อมูลจากฐานข้อมูลไปยังหน้าเว็บผ่าน inertia โดยการ render
      */
     public function index()
     {
