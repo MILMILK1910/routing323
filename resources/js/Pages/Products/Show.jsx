@@ -26,8 +26,9 @@ export default function Show({ products }) {
                         />
                     )}
                     <div className="w-1/2">
-                        <h1 className="text-2xl font-semibold">{products.name}</h1>
-                        <p className="mt-4 text-gray-700">{products.description}</p>
+                        <h1 className="text-3xl font-semibold">{products.name}</h1>
+                        <p className="mt-4 text-gray-700 ">{products.description}</p>
+                        <hr className="my-6  border-t border-gray-300" />
                         <p className="mt-4 font-bold text-xl mb-8">Price: ${products.price}</p>
                         <Link href="/products" className="inline-block px-5 py-2 text-white bg-red-600 rounded-xl hover:bg-red-700 ">Back To All Product </Link>
                     </div>

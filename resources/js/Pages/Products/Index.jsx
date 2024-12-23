@@ -21,8 +21,8 @@ export default function Index({ products }) {
                     <div>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {products.map((product) => (
-                                <li key={product.id} className="p-4 border border-gray-300 rounded-lg shadow-sm bg-gray-50">
-                                    <Link href={`/products/${product.id}`} className="block text-center">
+                                <li key={product.id} className="p-4 border border-gray-300 rounded-lg shadow-sm bg-gray-50 flex flex-col justify-between">
+                                    <Link href={`/products/${product.id}`} className="block">
                                         {product.image && (
                                             <div className="w-full h-64 overflow-hidden rounded-lg mb-4">
                                                 <img
@@ -32,8 +32,8 @@ export default function Index({ products }) {
                                                 />
                                             </div>
                                         )}
-                                        <div className="text-lg font-medium">{product.name}</div>
-                                        <p className="text-base text-gray-500">${product.price}</p>
+                                        <div className="text-lg font-medium ">{product.name}</div>
+                                        <p className="text-right text-base text-gray-500">${product.price}</p>
                                     </Link>
                                 </li>
                             ))}
