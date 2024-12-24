@@ -2,14 +2,14 @@ import { Link } from "@inertiajs/react";
 import { Head } from '@inertiajs/react';
 
 //หน้าโชว์ข้อมูลของproduct
-export default function Show({ products }) {
+export default function Show({ products }) { // ฟังก์ชัน Show ที่รับ props ชื่อ products
     return (
         <div>
             <div className="bg-white shadow">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
                         <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                            Product Detial
+                            Product Detail
                         </h2>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export default function Show({ products }) {
                         <p className="mt-4 text-gray-700 ">{products.description}</p>
                         <hr className="my-6  border-t border-gray-300" />
                         <p className="mt-4 font-bold text-xl mb-8">Price: ${products.price}</p>
-                        <Link href="/products" className="inline-block px-5 py-2 text-white bg-red-600 rounded-xl hover:bg-red-700 ">Back To All Product </Link>
+                        <Link href="/products" className="inline-block px-5 py-2 text-white bg-red-600 rounded-xl hover:bg-red-700">Back To All Product</Link>
                     </div>
                 </div>
             </div>

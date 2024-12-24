@@ -8,7 +8,7 @@ use App\Http\Controllers\ProductController;
 
 
 //สร้าง middleware ให้ product เพื่อให้ผู้ที่เข้าสู่ระบบดูได้เท่านั้น และตั้งชื่อใหม่เพื่อให้ง่ายต่อการนำไปใช้ต่อ
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () { // กำหนดกลุ่มของ route ที่ต้องผ่าน middleware 'auth'
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 });

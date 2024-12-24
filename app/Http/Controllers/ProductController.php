@@ -9,7 +9,7 @@ use Inertia\Inertia;
 
 class ProductController extends Controller
 {
-
+// สร้างตัวแปร $products เพื่อเก็บข้อมูลสินค้าในรูปแบบ array
     private $products=[
         ['id' => 1, 'name' => 'Laptop',
         'description' => 'Boost your productivity and creativity with Surface Laptop 6 for Business and Microsoft Copilot.¹˒² Get up to two-times
@@ -143,15 +143,16 @@ class ProductController extends Controller
      * Display the specified resource.
      * ใช้ในการค้นหน้า product ที่มี id ที่มีid ที่ตรงกับ $id หากไม่พบ prd จะส่งกลับไปหน้า error 404 หากพบprd จะไปสู่หน้า product/show เพื่อแสดงรายละเอียดprd
      */
+    //การแสดงข้อมูลของสินค้าที่เลือก
     public function show(string $id)
     {
-        $products = collect($this->products)->firstWhere('id',$id);
+        $products = collect($this->products)->firstWhere('id',$id);  // ค้นหาสินค้าที่มี id ตรงกับ $id
 
         if(!$products){
             abort(404, 'Product not found');
         }
 
-        return Inertia::render('Products/Show', ['products' => $products]);
+        return Inertia::render('Products/Show', ['products' => $products]); // แสดงหน้า Products/Show พร้อมส่งข้อมูล product ไปด้วย
     }
 
     /**
